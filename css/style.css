@@ -1,0 +1,59 @@
+/* * {
+    margin:0;
+    padding:0;
+} */
+
+body {
+    background-color: #f4f4f4;
+    color: #555555;
+    /* 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold; 
+    !!same as below!!
+    */
+
+    font: normal 16 px Arial, Helvetica, sans-serif;
+    margin: 0;
+    line-height: 1.5em;
+}
+
+    /* 
+    Container class to keep content from being pushed
+    up to the edge
+    */
+.container {
+    width:80%;
+    
+    /* sets auto margin to all sides (moves to the middle) */
+    margin: auto;
+}
+
+/* Target an html class */
+.box-1 {
+    background-color: #333;
+    color: #fff;
+    /* on the right, we have a 5px wide, solid red border */
+    /* border-right:5px red solid; */
+    /* same as above! */
+    border-width:3px;
+    border-bottom-width: 10px;
+    border-top-style:dotted;
+    /* Apparently, CSS gives precedence to the last style element listed if it confilcts with other style elements. */
+    border: 5px red solid;
+    
+    padding: 10px 20px;
+    margin: 20px 0px;
+
+}
+
+/* This is to target any h1 that is in this box-1 class */
+.box-1 h1 {
+    font-family: Tahoma;
+    font-weight: 800;
+    font-style:italic;
+    text-decoration:underline;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    word-spacing: 1em;
+}
