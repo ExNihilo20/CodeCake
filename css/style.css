@@ -18,15 +18,50 @@ body {
     line-height: 1.5em;
 }
 
-    /* 
+/* Global style for links */
+a {
+    text-decoration: none;
+    color: black;
+
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: green;
+}
+
+a:visited {}
+
+/* 
     Container class to keep content from being pushed
     up to the edge
     */
 .container {
-    width:80%;
-    
+    width: 80%;
+
     /* sets auto margin to all sides (moves to the middle) */
     margin: auto;
+}
+
+/* Targets all button class elements */
+.button {
+    background-color: #333;
+    color: #f4f4f4;
+    padding: 10px 15px;
+    border: none;
+}
+
+.button:hover {
+    background-color: red;
+    color: #fff;
+}
+
+/* This clears any float formatting from elements above the element you want to style */
+.clr {
+    clear: both;
 }
 
 /* Target an html class */
@@ -36,12 +71,12 @@ body {
     /* on the right, we have a 5px wide, solid red border */
     /* border-right:5px red solid; */
     /* same as above! */
-    border-width:3px;
+    border-width: 3px;
     border-bottom-width: 10px;
-    border-top-style:dotted;
+    border-top-style: dotted;
     /* Apparently, CSS gives precedence to the last style element listed if it confilcts with other style elements. */
     border: 5px red solid;
-    
+
     padding: 10px 20px;
     margin: 20px 0px;
 
@@ -51,9 +86,136 @@ body {
 .box-1 h1 {
     font-family: Tahoma;
     font-weight: 800;
-    font-style:italic;
-    text-decoration:underline;
+    font-style: italic;
+    text-decoration: underline;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     word-spacing: 1em;
+}
+
+.box-2 {
+    border: 3px dotted #ccc;
+    padding: 20px;
+    margin: 20px 0px;
+}
+
+.categories {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.categories h2 {
+    text-align: center;
+
+}
+
+.categories ul {
+    padding: 0px;
+    list-style: square;
+    /* 'list-style: none' undoes the styling of square for the bullet points in the unordered list */
+    list-style: none;
+    padding-left: 20px;
+}
+
+/* Gives the lists an underline */
+.categories li {
+    padding-bottom: 6px;
+    border-bottom: dotted 3px #333;
+    list-style-image: url('../images/check.png');
+}
+
+/* form begin*/
+.my-form {
+    padding: 20px;
+
+}
+
+.my-form .form-group {
+    padding-bottom: 15px;
+}
+
+/* creates a line break between each label and input text-box in your form */
+.my-form label {
+    display: block;
+}
+
+.my-form input[type="text"],
+.my-form textarea {
+    padding: 8px;
+    width: 100%;
+}
+
+.block {
+    float: left;
+    width: 33.3%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    /* Thix box-sizing element takes the padding and border (that would normally cause the 3rd heading to overflow) and applies
+       all styles evenly amongst the block elements */
+    box-sizing: border-box;
+}
+
+#main-block {
+    float: left;
+    width: 70%;
+}
+
+#sidebar {
+    float: right;
+    width: 30%;
+    background-color: #333;
+    color: #ccc;
+    padding: 15px;
+    box-sizing: border-box;
+
+}
+
+.p-box {
+    width: 800px;
+    height: 500px;
+    border: 1px solid black;
+    margin-top: 30px;
+    position: relative;
+    background-image: url('../images/bg-image.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.p-box h1 {
+    position: absolute;
+    top: 40px;
+    left: 200px;
+}
+
+.p-box h2 {
+    position: absolute;
+    bottom: 40px;
+    right: 100px;
+}
+
+.fix-me {
+    position: fixed;
+    top: 400px;
+}
+
+/* pseudo class targeting */
+.my-list li:first-child {
+    background: red;
+
+}
+
+.my-list li:last-child {
+    background: blue;
+}
+
+/* using a pseudoclass to target the nth (5th) list item */
+.my-list li:nth-child(5) {
+    background: yellow;
+}
+
+/* targeting all even list items */
+.my-list li:nth-child(even) {
+    background: grey;
 }
